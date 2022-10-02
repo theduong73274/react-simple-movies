@@ -4,6 +4,7 @@ import 'swiper/scss';
 import Banner from './components/banner/Banner';
 import Main from './components/layout/Main';
 import HomePage from './pages/HomePage';
+import MovieDetailPage from './pages/MovieDetailPage';
 import MoviePage from './pages/MoviePage';
 
 function App() {
@@ -22,6 +23,10 @@ function App() {
 					></Route>
 
 					<Route path="/movies" element={<MoviePage></MoviePage>}></Route>
+					<Route
+						path="/movies/:moviesId"
+						element={<MovieDetailPage></MovieDetailPage>}
+					></Route>
 				</Route>
 			</Routes>
 		</Fragment>
