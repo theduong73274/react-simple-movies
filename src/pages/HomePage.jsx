@@ -9,7 +9,7 @@ const HomePage = () => {
 					Now playing
 				</h2>
 
-				<MovieList></MovieList>
+				<MovieList type="now_playing"></MovieList>
 			</section>
 
 			<section className="pb-20 mb-10 movies-layout page-container">
