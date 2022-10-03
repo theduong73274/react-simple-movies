@@ -37,17 +37,17 @@ const MoviePage = () => {
 	};
 
 	const movies = data?.results || [];
+	console.log('🚀 ~ MoviePage ~ data', data);
 	// if (!data) return null;
 	// const { page, total_pages } = data;
 
 	useEffect(() => {
-		if (!data || !data.total_pages) return;
-		const endOffset = itemOffset + itemsPerPage;
-		setPageCount(Math.ceil(data.total_pages / itemsPerPage));
+		if (!data || !data.total_results) return;
+		setPageCount(Math.ceil(data.total_results / itemsPerPage));
 	}, [data, itemOffset]);
 
 	const handlePageClick = (event) => {
-		const newOffset = (event.selected * itemsPerPage) % data.total_pages;
+		const newOffset = (event.selected * itemsPerPage) % data.total_results;
 		setItemOffset(newOffset);
 		setNextPage(event.selected + 1);
 	};
