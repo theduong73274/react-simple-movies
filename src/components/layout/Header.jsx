@@ -13,7 +13,6 @@ const Header = () => {
 			</NavLink>
 			<NavLink
 				to="/movies"
-				end
 				className={({ isActive }) => (isActive ? 'text-primary' : '')}
 			>
 				Movies

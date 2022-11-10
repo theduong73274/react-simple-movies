@@ -10,8 +10,8 @@ import Main from './components/layout/Main';
 
 // dynamic import
 const HomePage = lazy(() => import('./pages/HomePage'));
-// const MoviePage = lazy(() => import('./pages/MoviePage'));
-const MoviePageV2 = lazy(() => import('./pages/MoviePageV2'));
+const MoviePage = lazy(() => import('./pages/MoviePage'));
+// const MoviePageV2 = lazy(() => import('./pages/MoviePageV2'));
 const MovieDetailPage = lazy(() => import('./pages/MovieDetailPage'));
 
 function App() {
@@ -31,7 +31,7 @@ function App() {
 						></Route>
 
 						{/* <Route path="/movies" element={<MoviePage></MoviePage>}></Route> */}
-						<Route path="/movies" element={<MoviePageV2></MoviePageV2>}></Route>
+						<Route path="/movies" element={<MoviePage></MoviePage>}></Route>
 						<Route
 							path="/movies/:moviesId"
 							element={<MovieDetailPage></MovieDetailPage>}
